@@ -8,7 +8,6 @@ function Quotes({ quotes }) {
       <Quote quote={quote} />
     </li>
   ));
-  console.log(quoteList);
 
 
   return ( 
