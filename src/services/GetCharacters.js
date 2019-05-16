@@ -1,5 +1,5 @@
-const GetQuotes = (count = 10) => {
-  return fetch(`https://futuramaapi.herokuapp.com/api/quotes/${count}`)
+const GetCharacters = () => {
+  return fetch('https://rickandmortyapi.com/api/character/')
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
       if(!ok) throw 'Unable to fetch quote';
@@ -7,5 +7,5 @@ const GetQuotes = (count = 10) => {
     });
 };
 
-export default GetQuotes;
+export default GetCharacters;
 

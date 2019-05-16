@@ -6,7 +6,7 @@ function Character({ character }){
     <>
     <p>{character.name}</p> 
     <p>{character.status}</p>
-    <p>{character.age}</p>
+    <img src={character.image} />
     <p>{character.species}</p>
     </>
   ); 
@@ -16,7 +16,7 @@ Character.propTypes = {
   character: PropTypes.shape({
     name: PropTypes.string.isRequired,
     status: PropTypes.string.isRequired,
-    age: PropTypes.string,
+    image: PropTypes.string,
     species: PropTypes.string
   })
 };

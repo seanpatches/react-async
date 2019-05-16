@@ -8,13 +8,13 @@ describe('Characters component', () => {
       name: 'Me',
       status: 'Dead',
       species: 'Dog',
-      age: '20'
+      image: '20'
     },
     {
       name: 'You',
       status: 'Alive',
       species: 'Dog',
-      age: '10'
+      image: '10'
     }];
 
     const wrapper = shallow(<Characters characters={characters} />);

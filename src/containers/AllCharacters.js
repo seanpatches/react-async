@@ -12,12 +12,12 @@ export default class TopQuotes extends PureComponent {
   fetchCharacters = () => {
     this.setState({ loading: true });
     GetCharacters()
-      .then(console.log)
+      .then(res => res.results)
       .then(characters => this.setState({ characters, loading: false }));
   }
 
   componentDidMount() {
-    this.fetchQuotes();
+    this.fetchCharacters();
   }
 
   render() {

@@ -7,7 +7,7 @@ describe('Character component', () => {
     const character = {
       name: 'Sean',
       status: 'Alive?',
-      age: '27',
+      image: 'imaged',
       species: 'Human'
     };
     const wrapper = shallow(<Character character={character} />);
