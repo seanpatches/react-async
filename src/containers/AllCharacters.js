@@ -13,22 +13,23 @@ export default class TopQuotes extends PureComponent {
 
   nextPage = () => {
     this.setState(state => {
-      if(state.totalPages)
+      if(state.page !== state.totalPages)
         return { page: state.page + 1 };
     });
   }
 
   lastPage = () => {
     this.setState(state => {
-      if(state.page !== state.totalPages - 1){
+      if(state.page !== 1){
         return { page: state.page - 1 };
       }
     });
   }
+
   
   fetchCharacters = () => {
     this.setState({ loading: true });
-    GetCharacters()
+    GetCharacters(this.state.page)
       .then(res => {
         return Promise.all([
           res.results,
@@ -39,11 +40,16 @@ export default class TopQuotes extends PureComponent {
         return this.setState({ characters, totalPages: info.pages, loading: false });
       });
   }
-
-  componentDidMount() {
-    this.fetchCharacters();
+  
+  componentDidUpdate(){
+    console.log(this.state.page);
+    this.fetchCharacters(this.state.page);
   }
   
+  componentDidMount() {
+    this.fetchCharacters(this.state.page);
+  }
+
   render() {
     const { characters } = this.state;
     return (
