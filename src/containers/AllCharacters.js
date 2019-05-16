@@ -1,42 +1,27 @@
-// import React, { PureComponent } from 'react';
-// import PropTypes from 'prop-types';
-// import GetQuotes from '../services/GetQuotes';
-// import Quotes from '../components/Characters';
+import React, { PureComponent } from 'react';
+import GetCharacters from '../services/GetCharacters';
+import Characters from '../components/Characters';
 
-// export default class TopQuotes extends PureComponent {
-//   static propTypes = {
-//     count: PropTypes.number
-//   }
+export default class TopQuotes extends PureComponent {
 
-//   static defaultProps = {
-//     count: 10
-//   }
-
-//   state = {
-//     quotes: [],
-//     loading: false
-//   }
+  state = {
+    characters: [],
+    loading: false
+  }
   
-//   fetchQuotes = () => {
-//     this.setState({ loading: true });
-//     GetQuotes(this.props.count)
-//       .then(quotes => this.setState({ quotes, loading: false }));
-//   }
+  fetchCharacters = () => {
+    this.setState({ loading: true });
+    GetCharacters()
+      .then(console.log)
+      .then(characters => this.setState({ characters, loading: false }));
+  }
 
-//   componentDidMount() {
-//     this.fetchQuotes();
-//   }
+  componentDidMount() {
+    this.fetchQuotes();
+  }
 
-//   componentDidUpdate(prevProps){
-//     if(prevProps.count !== this.props.count){
-//       this.fetchQuotes();
-//     }
-//   }
-
-//   render() {
-//     const { quotes } = this.state;
-//     return <Quotes quotes={quotes} />;
-//   }
-
-
-// }
+  render() {
+    const { characters } = this.state;
+    return <Characters characters={characters} />;
+  }
+}
