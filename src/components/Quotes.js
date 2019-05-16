@@ -1,0 +1,25 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import Quote from './Quote.js';
+
+function Quotes({ quotes }) {
+  const quoteList = quotes.map(quote => (
+    <li key={quote.character}>
+      <Quote quote={quote} />
+    </li>
+  ));
+  console.log(quoteList);
+
+
+  return ( 
+    <ul>
+      {quoteList}
+    </ul>
+  );
+}
+
+Quotes.propTypes = {
+  quotes: PropTypes.array.isRequired
+};
+
+export default Quotes;

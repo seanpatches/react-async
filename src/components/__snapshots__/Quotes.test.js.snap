@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quotes component renders Quotes 1`] = `
+<ul>
+  <li
+    key="Fry"
+  >
+    <Quote
+      quote={
+        Object {
+          "character": "Fry",
+          "image": "/image",
+          "quote": "What??",
+        }
+      }
+    />
+  </li>
+  <li
+    key="Me"
+  >
+    <Quote
+      quote={
+        Object {
+          "character": "Me",
+          "image": "/image2",
+          "quote": "Why??",
+        }
+      }
+    />
+  </li>
+</ul>
+`;
