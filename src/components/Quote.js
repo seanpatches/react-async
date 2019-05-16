@@ -5,7 +5,7 @@ function Quote({ quote }){
   return (
     <>
     <p>{quote.character}</p> 
-    <img src={Quote.image}/>
+    <img src={quote.image}/>
     <p>{quote.quote}</p>
     </>
   ); 

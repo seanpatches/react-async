@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import GetQuotes from '../services/GetQuote';
+import GetQuotes from '../services/GetQuotes';
 import Quotes from '../components/Quotes';
 
 export default class TopQuotes extends PureComponent {
@@ -19,7 +19,8 @@ export default class TopQuotes extends PureComponent {
   
   fetchQuotes = () => {
     this.setState({ loading: true });
-    GetQuotes(this.props.count);
+    GetQuotes(this.props.count)
+      .then(quotes => this.setState({ quotes, loading: false }));
   }
 
   componentDidMount() {
