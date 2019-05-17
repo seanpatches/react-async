@@ -43,7 +43,6 @@ export default class TopQuotes extends PureComponent {
   
   componentDidUpdate(_, prevState){
     if(this.state.page === prevState.page) return null;
-    console.log('fired!');
     this.fetchCharacters(this.state.page);
   }
   
