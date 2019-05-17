@@ -41,8 +41,9 @@ export default class TopQuotes extends PureComponent {
       });
   }
   
-  componentDidUpdate(){
-    console.log(this.state.page);
+  componentDidUpdate(_, prevState){
+    if(this.state.page === prevState.page) return null;
+    console.log('fired!');
     this.fetchCharacters(this.state.page);
   }
   

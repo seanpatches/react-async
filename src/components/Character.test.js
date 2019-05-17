@@ -8,7 +8,7 @@ describe('Character component', () => {
       name: 'Sean',
       status: 'Alive?',
       image: 'imaged',
-      species: 'Human'
+      species: 'Human',
     };
     const wrapper = shallow(<Character character={character} />);
     expect(wrapper).toMatchSnapshot();
