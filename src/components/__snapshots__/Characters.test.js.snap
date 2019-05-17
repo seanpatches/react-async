@@ -8,7 +8,7 @@ exports[`Characters component renders Characters 1`] = `
     <Character
       character={
         Object {
-          "age": "20",
+          "image": "20",
           "name": "Me",
           "species": "Dog",
           "status": "Dead",
@@ -22,7 +22,7 @@ exports[`Characters component renders Characters 1`] = `
     <Character
       character={
         Object {
-          "age": "10",
+          "image": "10",
           "name": "You",
           "species": "Dog",
           "status": "Alive",
