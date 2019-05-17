@@ -3,7 +3,7 @@
 exports[`Quotes component renders Quotes 1`] = `
 <ul>
   <li
-    key="Fry"
+    key="What??"
   >
     <Quote
       quote={
@@ -16,7 +16,7 @@ exports[`Quotes component renders Quotes 1`] = `
     />
   </li>
   <li
-    key="Me"
+    key="Why??"
   >
     <Quote
       quote={

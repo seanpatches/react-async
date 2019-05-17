@@ -5,7 +5,9 @@ exports[`Quote component renders a Quote 1`] = `
   <p>
     Fry
   </p>
-  <img />
+  <img
+    src="/image"
+  />
   <p>
     What??
   </p>
